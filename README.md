@@ -18,7 +18,11 @@ Clone o repositório em algum diretório da sua máquina e inicie as vms:
 ```bash
 git clone https://github.com/dehmelo/vm-infra.git
 cd vm-infra
-vagrant up
+```
+
+Para iniciar as VMs, caso queira utilizar um disco secundário deverá executar o comando abaixo, pois este recurso é experimental e deve ser habilitar para uso de forma manual através da variável de ambiente:`VAGRANT_EXPERIMENTAL="disks`
+```
+VAGRANT_EXPERIMENTAL="disks" vagrant up
 ```
 
 As máquinas serão provisionadas, este processo leva alguns minutos e depende da sua velocidade de conexão com a internet.

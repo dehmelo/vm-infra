@@ -15,6 +15,7 @@ Vagrant.configure("2") do |config|
       a.vm.box = "#{conf['box']}"
       a.vm.network 'private_network', ip: "192.168.57.#{conf['ip']}"
       a.vm.hostname = "#{name}"
+      a.vm.disk :disk, name: "iscsi", size: "20GB"
       a.vm.provider 'virtualbox' do |vb|
         vb.memory = conf['memory']
         vb.cpus = conf['cpus']
