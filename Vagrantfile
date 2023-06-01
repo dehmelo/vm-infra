@@ -2,8 +2,8 @@
 # vi: set ft=ruby :
 
 vms = {
-  'srv01-ubuntu' => {'memory' => '1024', 'cpus' => 1, 'ip' => '110', 'box' => 'ubuntu/focal64', 'provision' => 'ubuntu.sh'},
-  'srv02-centos' => {'memory' => '1024', 'cpus' => 1, 'ip' => '220', 'box' => 'centos/7', 'provision' => 'centos.sh'},
+  'srv-debian' => {'memory' => '1024', 'cpus' => 1, 'ip' => '110', 'box' => 'debian/bullseye64', 'provision' => 'debian.sh'},
+  'srv-alma' => {'memory' => '1024', 'cpus' => 1, 'ip' => '220', 'box' => 'almalinux/8', 'provision' => 'alma.sh'},
 }
 
 Vagrant.configure("2") do |config|
