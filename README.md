@@ -11,7 +11,7 @@ Nome            | vCPUs | Memoria RAM | IP             | S.O.
 srv-debian   | 1     | 1024MB      | 192.168.57.110 | debian/bullseye64
 srv-alma     | 1     | 1024MB      | 192.168.57.220 | almalinux/8
 
-Após as instalações das ferramentas, através do **Vagrant** será criada as máquinas virtuais no **VirtualBox** de forma automatizada, seguindo as instruções das configurações no Vagrantfile. O **Vagrant** é utilizado para criar e gerenciar as máquinas de uma maneira simples e automática.
+Após as instalações das ferramentas, através do **Vagrant** serão criadas as máquinas virtuais no **VirtualBox** de forma automatizada, seguindo as instruções da configuração do Vagrantfile. O **Vagrant** é utilizado para criar e gerenciar as máquinas de uma maneira simples e automática.
 
 Clone o repositório em algum diretório da sua máquina e inicie as vms:
 
