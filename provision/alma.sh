@@ -2,6 +2,7 @@
 
 #Instalando pacotes
 PACOTES="epel-release vim net-tools tzdata curl git"
+yum update -y
 yum install -y $PACOTES
 
 #Atualizando horário
@@ -14,4 +15,7 @@ chmod 400 /root/.ssh/id_rsa*
 cp /vagrant/files/id_rsa.pub /root/.ssh/authorized_keys
 
 #Adicionando usuário
+id suporte
+if [ "$?" -ne 0 ]; then
 useradd -m -d /home/suporte -s /bin/bash suporte
+fi
