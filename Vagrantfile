@@ -17,14 +17,10 @@ Vagrant.configure("2") do |config|
       a.vm.hostname = "#{name}"
       a.vm.disk :disk, name: "iscsi", size: "20GB"
       a.vm.provider 'virtualbox' do |vb|
+        vb.customize ["modifyvm", :id, "--groups", "/Linux"]
         vb.memory = conf['memory']
         vb.cpus = conf['cpus']
         vb.name = "#{name}"
-      end
-      a.vm.provider 'libvirt' do |lv|
-        lv.memory = conf['memory']
-        lv.cpus = conf['cpus']
-        lv.cputopology :sockets => 1, :cores => conf['cpus'], :threads => '1'
       end
       a.vm.provision 'shell', path: "provision/#{conf['provision']}", args: "#{conf['ip']}"
     end
