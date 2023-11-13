@@ -17,7 +17,8 @@ cp /vagrant/files/id_rsa.pub /root/.ssh/authorized_keys
 #Adicionando usuário
 id suporte
 if [ "$?" -ne 0 ]; then
-useradd -m -p '$1$E6xrggg7$751GMmhS0/pFKrkhjrO3L0' -d /home/suporte -s /bin/bash suporte
+useradd -m -p '$6$F/96yh0lC8IHK71X$eI29BIG/LFZUd/KZaT2r3XQ/ydvAF31y9ouEry5yPbbDL.pTlWZJDbkF1rf7B8FnQy3mFMq3FOPaDpB8IJ1K20
+' -d /home/suporte -s /bin/bash suporte
 fi
 usermod -aG wheel suporte
 echo "suporte ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/suporte
